@@ -31,8 +31,29 @@ div {
   height: 100px;
   top: calc(50% - 50px);
   width: 200px;
-
+  transition: all 250ms linear;
+  overflow: hidden;
   background-color: limegreen;
+}
+
+.js-box-hide {
+    max-height: 100%;
+}
+
+.js-diamond-move {
+    
+}
+
+.js-panel-expand {
+    
+}
+
+.js-circle-bounce {
+    
+}
+
+.js-list-append {
+
 }
 
 .diamond {
