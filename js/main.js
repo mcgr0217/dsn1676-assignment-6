@@ -29,6 +29,12 @@ $btnBounce.on("click", function () {
     $circle.toggleClass("js-circle-bounce");
 });
 
+$circle.on("animationend", function () {
+    $circle.removeClass("js-circle-bounce");
+});
+
 $btnAppend.on("click", function () {
     $list.toggleClass("js-list-append");
+    var $li = $('<li>');
+    $li.append($list-append);
 });

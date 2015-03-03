@@ -31,51 +31,47 @@ div {
   height: 100px;
   top: calc(50% - 50px);
   width: 200px;
-  transition: all 250ms linear;
   overflow: hidden;
   background-color: limegreen;
 }
 
 .js-box-hide {
     max-height: 0%;
-}
-
-.js-diamond-move {
-    
-}
-
-.js-panel-expand {
-    
-}
-
-.js-circle-bounce {
- 
-}
-
-.js-list-append {
-
+    transition: all 500ms ease-in;
 }
 
 .diamond {
-  height: 80px;
-  right: 2em;
-  top: calc(50% - 40px);
-  width: 80px;
+    height: 80px;
+    right: 2em;
+    top: calc(50% - 40px);
+    width: 80px;
+    overflow: hidden;
+    background-color: hotpink;
+    transform: rotate(45deg);
+    transition: all 250ms linear;
+}
 
-  background-color: hotpink;
-  transform: rotate(45deg);
+.js-diamond-move {
+   right: 8em;
 }
 
 .panel {
   width: 250px;
   top: 50%;
-
+  overflow: hidden;
   background-color: yellow;
   transform: translateY(-50%);
-
+  transition: 
   color: darkgoldenrod;
   text-align: center;
 }
+
+
+.js-panel-expand {
+    max-height: 0;
+    animation: panel-expand 1s ease-in;
+}
+
 
 .panel h2 {
   margin: 0;
@@ -86,8 +82,35 @@ div {
   height: 100px;
   top: calc(50% - 50px);
   width: 100px;
-
   background-color: orange;
+}
+
+@keyframes circle-bounce {  
+    0% {
+        left: 100px;
+    }
+    10% {
+        top: 10px;
+    }
+    30% {  
+        left: 10px; 
+    }
+    50% {
+        top: 10px;
+    }
+    70% {  
+        left: 10px; 
+    } 
+    80% {
+        top: 10px;
+    }
+    100% {
+        right: 100px;
+    }
+}
+
+.js-circle-bounce {
+    animation: circle-bounce 1s linear;
 }
 
 .list {
@@ -111,4 +134,8 @@ div {
   border: 1px solid mediumpurple;
 
   color: mediumpurple;
+}
+
+.js-list-append {
+
 }
