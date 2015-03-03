@@ -63,14 +63,14 @@ div {
     top: 50%;
     overflow: hidden;
     background-color: yellow;
-    transform: translateY(-50%);
-    transition: all 250ms ease-out; 
+    transform: translateY(-50%); 
     color: darkgoldenrod;
     text-align: center;
+    transition: all 50ms ease-out;
 }
 
 .js-panel-expand {
-    max-height: 0;
+    max-height: 10em;
 }
 
 .panel h2 {
