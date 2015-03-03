@@ -108,7 +108,7 @@ div {
 }
 
 .js-circle-bounce {
-    animation: circle-bounce 2s linear;
+    animation: circle-bounce 1s linear;
 }
 
 .list {
@@ -135,5 +135,5 @@ div {
 }
 
 .js-list-append {
-
+    animation: all 250ms ease-in;
 }
