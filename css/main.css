@@ -28,21 +28,23 @@ div {
 }
 
 .box {
-  height: 100px;
-  top: calc(50% - 50px);
-  width: 200px;
-  overflow: hidden;
-  background-color: limegreen;
+    height: 100px;
+    top: calc(50% - 50px);
+    width: 200px;
+    opacity: 0;
+    overflow: hidden;
+    background-color: limegreen;
+    transition: all 250ms ease-in;
 }
 
 .js-box-hide {
-    max-height: 0%;
-    transition: all 500ms ease-in;
+    opacity: 1;
 }
 
 .diamond {
     height: 80px;
     right: 2em;
+    opacity: 0;
     top: calc(50% - 40px);
     width: 80px;
     overflow: hidden;
@@ -52,7 +54,8 @@ div {
 }
 
 .js-diamond-move {
-   right: 8em;
+    right: 8em;
+    opacity: 1;
 }
 
 .panel {
@@ -61,17 +64,14 @@ div {
   overflow: hidden;
   background-color: yellow;
   transform: translateY(-50%);
-  transition: 
+  transition: all 250ms ease-out; 
   color: darkgoldenrod;
   text-align: center;
 }
 
-
 .js-panel-expand {
     max-height: 0;
-    animation: panel-expand 1s ease-in;
 }
-
 
 .panel h2 {
   margin: 0;
@@ -83,6 +83,7 @@ div {
   top: calc(50% - 50px);
   width: 100px;
   background-color: orange;
+    border-radius: 50%;
 }
 
 @keyframes circle-bounce {  
@@ -91,9 +92,6 @@ div {
     }
     10% {
         top: 10px;
-    }
-    30% {  
-        left: 10px; 
     }
     50% {
         top: 10px;
