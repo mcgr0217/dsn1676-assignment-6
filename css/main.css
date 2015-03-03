@@ -61,15 +61,15 @@ div {
 .panel {
     width: 250px;
     top: 50%;
-    overflow: hidden;
     background-color: yellow;
     transform: translateY(-50%); 
     color: darkgoldenrod;
+    overflow: hidden;
     text-align: center;
-    transition: all 50ms ease-out;
+    transition: all 250ms ease-in 0s;
 }
 
-.js-panel-expand {
+.js-panel-collapse {
     max-height: 10em;
 }
 
@@ -89,6 +89,7 @@ div {
 @keyframes circle-bounce {  
     0% {
         left: 100px;
+        bottom: 100px;
     }
     20% {
         top: 10px;
@@ -130,10 +131,10 @@ div {
     overflow: hidden;
     background-color: plum;
     border: 1px solid mediumpurple;
-
+    
     color: mediumpurple;
 }
 
 .js-list-append {
-    animation: all 250ms ease-in;
+    animation: list-append 1000ms ease-in;
 }

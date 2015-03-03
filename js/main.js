@@ -22,7 +22,7 @@ $btnMove.on("click", function () {
 });
 
 $btnCollapse.on("click", function () {
-    $panel.toggleClass("js-panel-expand");
+    $panel.toggleClass("js-panel-collapse");
 });
 
 $btnBounce.on("click", function () {
@@ -34,7 +34,7 @@ $circle.on("animationend", function () {
 });
 
 $btnAppend.on("click", function () {
-    var $li = $('<li>').html("hello");
+    var $li = $("<li>").html("hello");
     $li.addClass("js-list-append");
     $list.append($li);
 });
