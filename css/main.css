@@ -5,7 +5,6 @@ html {
 body {
     margin: 2em auto;
     max-width: 35em;
-
     background-color: #fff;
     border: 1px solid #ccc;
 }
@@ -13,7 +12,6 @@ body {
 section {
     padding: 4em 1em;
     position: relative;
-
     border-bottom: 1px solid #ccc;
 }
 
@@ -34,6 +32,7 @@ div {
     opacity: 0;
     overflow: hidden;
     background-color: limegreen;
+    -webkit-transition: all 250ms ease-in;
     transition: all 250ms ease-in;
 }
 
@@ -71,6 +70,7 @@ div {
 }
 
 .js-panel-collapse {
+    -webkit-max-height: 10em;
     max-height: 10em;
 }
 
@@ -85,6 +85,28 @@ div {
     width: 100px;
     background-color: orange;
     border-radius: 50%;
+}
+
+@-webkit-keyframes circle-bounce {  
+    0% {
+        left: 100px;
+        bottom: 100px;
+    }
+    20% {
+        top: 10px;
+    }
+    40% {
+        bottom: 20px;
+    }
+    70% {  
+        top: 20px; 
+    } 
+    80% {
+        left: 10px;
+    }
+    100% {
+        right: 100px;
+    }
 }
 
 @keyframes circle-bounce {  
@@ -110,6 +132,7 @@ div {
 }
 
 .js-circle-bounce {
+    -webkit-animation: circle-bounce 1s linear;
     animation: circle-bounce 1s linear;
 }
 
@@ -121,7 +144,6 @@ div {
     right: 1em;
     top: 1em;
     width: 250px;
-
     border: 1px solid #ccc;
     overflow: hidden;
     overflow-y: auto;
@@ -132,12 +154,21 @@ div {
     overflow: hidden;
     background-color: plum;
     border: 1px solid mediumpurple;
-    
     color: mediumpurple;
 }
 
 .js-list-append {
+    -webkit-animation: list-append 250ms linear;
     animation: list-append 250ms linear;
+}
+
+@-webkit-keyframes list-append {
+    0% {
+        max-height: 0;
+    }
+    100% {
+        max-height: 38px;
+    }
 }
 
 @keyframes list-append {
